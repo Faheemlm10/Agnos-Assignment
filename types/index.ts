@@ -9,6 +9,12 @@ export interface AbdomenSelectionProps {
   leftPosCaption: string;
   widthHighlight?: number;
   widthCaption?: number;
-  heightHighlight?: number;
-  heightCaption?: number;
+}
+export interface FingerSelectionProps {
+  part: string;
+  imageHighlight: StaticImageData;
+  topPosHighlight: string;
+  leftPosHighlight: string;
+  widthHighlight: number;
+  
 }

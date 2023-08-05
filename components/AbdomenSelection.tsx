@@ -12,8 +12,6 @@ const AbdomenSelection = ({
   leftPosCaption,
   widthHighlight,
   widthCaption,
-  heightHighlight,
-  heightCaption,
 }: AbdomenSelectionProps) => {
   const allOverClicked = useStore((state) => state.allOverClicked);
   const setAllOverClicked = useStore((state) => state.setAllOverClicked);
@@ -25,15 +23,14 @@ const AbdomenSelection = ({
       setClicked(true);
     } else {
       setClicked(false);
-      setHovered(false); 
+      setHovered(false);
     }
   }, [allOverClicked]);
 
   const containerStyle: React.CSSProperties = {
     top: topPosHighlight,
     left: leftPosHighlight,
-    width: widthHighlight !== undefined ? `${widthHighlight}px` : "77px",
-    height: heightHighlight !== undefined ? `${heightHighlight}px` : "5.2rem",
+    width: `${widthHighlight}px`,
     cursor: "pointer",
     opacity: clicked ? 1 : hovered ? 0.5 : 0,
     transition: "opacity 0.3s ease-in-out",
@@ -48,7 +45,6 @@ const AbdomenSelection = ({
             top: topPosCaption,
             left: leftPosCaption,
             width: widthCaption !== undefined ? `${widthCaption}px` : "auto",
-            height: heightCaption !== undefined ? `${heightCaption}px` : "auto",
             position: "absolute",
           }}
         >
@@ -70,7 +66,6 @@ const AbdomenSelection = ({
           src={imageHighlight}
           alt=""
           width={widthHighlight !== undefined ? widthHighlight : 77}
-          height={heightHighlight !== undefined ? heightHighlight : 5.2}
         />
       </div>
     </>

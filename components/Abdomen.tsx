@@ -17,22 +17,19 @@ import bottomLeft from "../images/abs/rlq-highlight.png";
 import bottomLeftCaption from "../images/abs/rlq-active.png";
 import AbdomenSelection from "./AbdomenSelection";
 import topCaption from "../images/abs/epigastrium-active.png";
-import allOver from "../images/captions/all-over-highlight.png";
+import allOver from "../images/buttons/all-over-highlight.png";
 import { useStore } from "@/app/store";
 
 const Abdomen = () => {
   const allOverClicked = useStore((state) => state.allOverClicked);
   const setAllOverClicked = useStore((state) => state.setAllOverClicked);
 
-  
   const handleAllOverClick = () => {
     setAllOverClicked(!allOverClicked);
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mt-7 font-[600] text-[30px] relative">
-      <h1 className="head_text">Where do you feel the most pain?</h1>
-
+    <div className="flex flex-col justify-center items-center mt-7 font-[600] text-[30px] ">
       <div className="relative flex justify-center">
         <div className="relative">
           <Image
@@ -117,7 +114,7 @@ const Abdomen = () => {
       </div>
       <Image
         src={allOver}
-        className="object-contain hover:opacity-80 cursor-pointer w-[180px]" 
+        className="object-contain hover:opacity-80 cursor-pointer w-[180px]"
         alt="all button"
         onClick={handleAllOverClick}
       />
