@@ -114,7 +114,7 @@ const Abdomen = () => {
       </div>
       <Image
         src={allOver}
-        className="object-contain hover:opacity-80 cursor-pointer w-[180px]"
+        className="object-contain hover:opacity-80 cursor-pointer w-[180px] z-50"
         alt="all button"
         onClick={handleAllOverClick}
       />

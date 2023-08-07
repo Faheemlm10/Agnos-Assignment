@@ -58,7 +58,7 @@ const Finger = () => {
         <Image
           src={dipCaption}
           className="absolute object-contain top-[1%] right-[0%] w-[40%]"
-          alt="dip caption"
+          alt="dip caption" priority
         />
       ) : null}
       {(!fingersHurtsEverywhere && isMcpClicked) || isMcpHovered ? (
@@ -66,6 +66,7 @@ const Finger = () => {
           src={mcpCaption}
           className="absolute object-contain top-[27%] right-[0%] w-[40%]"
           alt="dip caption"
+          priority
         />
       ) : null}
 
@@ -74,6 +75,7 @@ const Finger = () => {
           src={pipCaption}
           className="absolute object-contain top-[11%] right-[0%] w-[40%]"
           alt="pip caption"
+          priority
         />
       ) : null}
       <Image

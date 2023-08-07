@@ -85,7 +85,7 @@ const FingerSelection = ({
         }}
         className="z-50"
       >
-        <Image src={imageHighlight} alt={part} width={widthHighlight} />
+        <Image src={imageHighlight} alt={part} width={widthHighlight}  priority/>
       </div>
     </>
   );

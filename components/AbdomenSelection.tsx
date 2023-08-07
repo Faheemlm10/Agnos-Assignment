@@ -66,6 +66,7 @@ const AbdomenSelection = ({
           src={imageHighlight}
           alt=""
           width={widthHighlight !== undefined ? widthHighlight : 77}
+          priority
         />
       </div>
     </>
