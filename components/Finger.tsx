@@ -54,140 +54,143 @@ const Finger = () => {
 
   return (
     <div className="flex flex-col justify-center items-center mt-7 font-[600] relative ">
-      {(!fingersHurtsEverywhere && isDipClicked) || isDipHovered ? (
+      <div className="relative ">
+        {(!fingersHurtsEverywhere && isDipClicked) || isDipHovered ? (
+          <Image
+            src={dipCaption}
+            className="absolute object-contain top-[4%] right-[4%] w-[35%]"
+            alt="dip caption"
+            priority
+          />
+        ) : null}
+        {(!fingersHurtsEverywhere && isMcpClicked) || isMcpHovered ? (
+          <Image
+            src={mcpCaption}
+            className="absolute object-contain top-[32%] right-[4%] w-[35%]"
+            alt="dip caption"
+            priority
+          />
+        ) : null}
+
+        {(!fingersHurtsEverywhere && isPipClicked) || isPipHovered ? (
+          <Image
+            src={pipCaption}
+            className="absolute object-contain top-[15%] right-[4%] w-[35%]"
+            alt="pip caption"
+            priority
+          />
+        ) : null}
         <Image
-          src={dipCaption}
-          className="absolute object-contain top-[1%] right-[0%] w-[40%]"
-          alt="dip caption" priority
-        />
-      ) : null}
-      {(!fingersHurtsEverywhere && isMcpClicked) || isMcpHovered ? (
-        <Image
-          src={mcpCaption}
-          className="absolute object-contain top-[27%] right-[0%] w-[40%]"
-          alt="dip caption"
+          src={FingerPicture}
+          className="object-contain"
+          height={500}
+          alt="finger-picture"
           priority
         />
-      ) : null}
-
-      {(!fingersHurtsEverywhere && isPipClicked) || isPipHovered ? (
-        <Image
-          src={pipCaption}
-          className="absolute object-contain top-[11%] right-[0%] w-[40%]"
-          alt="pip caption"
-          priority
+        <FingerSelection
+          part="dip"
+          imageHighlight={dipOne}
+          topPosHighlight="25%"
+          leftPosHighlight="19%"
+          widthHighlight={9}
         />
-      ) : null}
-      <Image
-        src={FingerPicture}
-        className="object-contain"
-        height={575}
-        alt="finger-picture"
-        priority
-      />
-      <FingerSelection
-        part="dip"
-        imageHighlight={dipOne}
-        topPosHighlight="22%"
-        leftPosHighlight="19%"
-        widthHighlight={50}
-      />
-      <FingerSelection
-        part="dip"
-        imageHighlight={dipTwo}
-        topPosHighlight="13%"
-        leftPosHighlight="30.5%"
-        widthHighlight={52}
-      />
-      <FingerSelection
-        part="dip"
-        imageHighlight={dipThree}
-        topPosHighlight="7%"
-        leftPosHighlight="42%"
-        widthHighlight={50}
-      />
-      <FingerSelection
-        part="dip"
-        imageHighlight={dipFour}
-        topPosHighlight="10%"
-        leftPosHighlight="54.5%"
-        widthHighlight={46}
-      />
-      <FingerSelection
-        part="mcp"
-        imageHighlight={mcpOne}
-        topPosHighlight="40%"
-        leftPosHighlight="27%"
-        widthHighlight={49}
-      />
-      <FingerSelection
-        part="mcp"
-        imageHighlight={mcpTwo}
-        topPosHighlight="36.5%"
-        leftPosHighlight="35.5%"
-        widthHighlight={50}
-      />
-      <FingerSelection
-        part="mcp"
-        imageHighlight={mcpThree}
-        topPosHighlight="34.5%"
-        leftPosHighlight="44.5%"
-        widthHighlight={49}
-      />
-      <FingerSelection
-        part="mcp"
-        imageHighlight={mcpFour}
-        topPosHighlight="34%"
-        leftPosHighlight="53%"
-        widthHighlight={53}
-      />
-      <FingerSelection
-        part="mcp"
-        imageHighlight={mcpFive}
-        topPosHighlight="51%"
-        leftPosHighlight="67%"
-        widthHighlight={53}
-      />
-      <FingerSelection
-        part="pip"
-        imageHighlight={pipOne}
-        topPosHighlight="30%"
-        leftPosHighlight="22%"
-        widthHighlight={51}
-      />
+        <FingerSelection
+          part="dip"
+          imageHighlight={dipTwo}
+          topPosHighlight="15%"
+          leftPosHighlight="30.5%"
+          widthHighlight={9}
+        />
+        <FingerSelection
+          part="dip"
+          imageHighlight={dipThree}
+          topPosHighlight="8%"
+          leftPosHighlight="42%"
+          widthHighlight={9}
+        />
+        <FingerSelection
+          part="dip"
+          imageHighlight={dipFour}
+          topPosHighlight="11%"
+          leftPosHighlight="54.5%"
+          widthHighlight={8}
+        />
+        <FingerSelection
+          part="mcp"
+          imageHighlight={mcpOne}
+          topPosHighlight="46%"
+          leftPosHighlight="27%"
+          widthHighlight={8.5}
+        />
+        <FingerSelection
+          part="mcp"
+          imageHighlight={mcpTwo}
+          topPosHighlight="42%"
+          leftPosHighlight="35.5%"
+          widthHighlight={9}
+        />
+        <FingerSelection
+          part="mcp"
+          imageHighlight={mcpThree}
+          topPosHighlight="39.5%"
+          leftPosHighlight="44.5%"
+          widthHighlight={9}
+        />
+        <FingerSelection
+          part="mcp"
+          imageHighlight={mcpFour}
+          topPosHighlight="39%"
+          leftPosHighlight="53%"
+          widthHighlight={10}
+        />
+        <FingerSelection
+          part="mcp"
+          imageHighlight={mcpFive}
+          topPosHighlight="59%"
+          leftPosHighlight="67%"
+          widthHighlight={9}
+        />
+        <FingerSelection
+          part="pip"
+          imageHighlight={pipOne}
+          topPosHighlight="35%"
+          leftPosHighlight="22%"
+          widthHighlight={9}
+        />
 
-      <FingerSelection
-        part="pip"
-        imageHighlight={pipTwo}
-        topPosHighlight="22%"
-        leftPosHighlight="33%"
-        widthHighlight={51}
-      />
-      <FingerSelection
-        part="pip"
-        imageHighlight={pipThree}
-        topPosHighlight="19%"
-        leftPosHighlight="43%"
-        widthHighlight={51}
-      />
-      <FingerSelection
-        part="pip"
-        imageHighlight={pipFour}
-        topPosHighlight="20%"
-        leftPosHighlight="53.5%"
-        widthHighlight={53}
-      />
-      <FingerSelection
-        part="pip"
-        imageHighlight={pipFive}
-        topPosHighlight="39%"
-        leftPosHighlight="75%"
-        widthHighlight={53}
-      />
+        <FingerSelection
+          part="pip"
+          imageHighlight={pipTwo}
+          topPosHighlight="25%"
+          leftPosHighlight="33%"
+          widthHighlight={9}
+        />
+        <FingerSelection
+          part="pip"
+          imageHighlight={pipThree}
+          topPosHighlight="22%"
+          leftPosHighlight="43%"
+          widthHighlight={8}
+        />
+        <FingerSelection
+          part="pip"
+          imageHighlight={pipFour}
+          topPosHighlight="23%"
+          leftPosHighlight="53.5%"
+          widthHighlight={10}
+        />
+        <FingerSelection
+          part="pip"
+          imageHighlight={pipFive}
+          topPosHighlight="44.5%"
+          leftPosHighlight="75%"
+          widthHighlight={9}
+        />
+      </div>
 
       <button
         onClick={handleHurtsEverywhereClick}
-        className="mt-5 ml-[-1rem] text-white w-[250px] py-5 rounded-full gradient-button hover:opacity-80 font-[600] tracking-widest"
+        className="mt-5 ml-[-1rem] text-white lg:w-[250px] md:w-[225px] sm:w-[200px] w-[150px] lg:py-5 md:py-4 sm:py-3 py-3 rounded-full gradient-button hover:opacity-80 font-[600] tracking-widest lg:text-[1rem] md:text-[0.8rem] sm:text-[0.7rem] text-[0.7rem] "
       >
         Hurts Everywhere
       </button>

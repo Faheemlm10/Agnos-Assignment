@@ -31,42 +31,42 @@ const Abdomen = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-7 font-[600] text-[30px] ">
       <div className="relative flex justify-center">
-        <div className="relative">
+        <div className="relative flex justify-center">
           <Image
             src={AbdomenPicture}
-            className="object-contain"
-            height={525}
+            className="object-contain  "
+            height={500}
             alt="abdomen-picture"
           />
           <AbdomenSelection
             imageHighlight={top}
             imageCaption={topCaption}
-            topPosHighlight="39%"
-            topPosCaption="25%"
-            leftPosHighlight="40.5%"
-            leftPosCaption="20%"
-            widthHighlight={81}
-            widthCaption={150}
+            topPosHighlight="40%"
+            topPosCaption="28%"
+            leftPosHighlight="41%"
+            leftPosCaption="24%"
+            widthHighlight={15}
+            widthCaption={25}
           />
           <AbdomenSelection
             imageHighlight={topRight}
             imageCaption={topRightCaption}
             topPosHighlight="47%"
-            topPosCaption="50%"
+            topPosCaption="49%"
             leftPosHighlight="50%"
             leftPosCaption="64%"
-            widthHighlight={80}
-            widthCaption={150}
+            widthHighlight={15}
+            widthCaption={25}
           />
           <AbdomenSelection
             imageHighlight={topLeft}
             imageCaption={topLeftCaption}
             topPosHighlight="48%"
             topPosCaption="50%"
-            leftPosHighlight="31%"
-            leftPosCaption="5%"
-            widthHighlight={85}
-            widthCaption={150}
+            leftPosHighlight="31.5%"
+            leftPosCaption="8%"
+            widthHighlight={16}
+            widthCaption={26}
           />
 
           <AbdomenSelection
@@ -75,9 +75,9 @@ const Abdomen = () => {
             topPosHighlight="56.5%"
             topPosCaption="40%"
             leftPosHighlight="43%"
-            leftPosCaption="14.6%"
-            widthHighlight={55}
-            widthCaption={180}
+            leftPosCaption="16%"
+            widthHighlight={11}
+            widthCaption={32}
           />
           <AbdomenSelection
             imageHighlight={bottomRight}
@@ -86,35 +86,35 @@ const Abdomen = () => {
             topPosCaption="68%"
             leftPosHighlight="50%"
             leftPosCaption="61%"
-            widthHighlight={77}
-            widthCaption={150}
+            widthHighlight={14.5}
+            widthCaption={26}
           />
           <AbdomenSelection
             imageHighlight={bottomLeft}
             imageCaption={bottomLeftCaption}
             topPosHighlight="61%"
             topPosCaption="68%"
-            leftPosHighlight="31%"
-            leftPosCaption="5%"
-            widthHighlight={82}
-            widthCaption={150}
+            leftPosHighlight="31.7%"
+            leftPosCaption="10%"
+            widthHighlight={15}
+            widthCaption={26}
           />
 
           <AbdomenSelection
             imageHighlight={bottom}
             imageCaption={bottomCaption}
-            topPosHighlight="67%"
+            topPosHighlight="68%"
             topPosCaption="78%"
             leftPosHighlight="41.5%"
-            leftPosCaption="23%"
-            widthHighlight={73}
-            widthCaption={150}
+            leftPosCaption="25%"
+            widthHighlight={14}
+            widthCaption={26}
           />
         </div>
       </div>
       <Image
         src={allOver}
-        className="object-contain hover:opacity-80 cursor-pointer w-[180px] z-50"
+        className="object-contain hover:opacity-80 cursor-pointer lg:w-[12rem] md:w-[11rem] w-[10rem] z-50"
         alt="all button"
         onClick={handleAllOverClick}
       />

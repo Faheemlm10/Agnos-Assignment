@@ -17,6 +17,8 @@ const AbdomenSelection = ({
   const setAllOverClicked = useStore((state) => state.setAllOverClicked);
   const [clicked, setClicked] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [dynamicWidthHighlight, setDynamicWidthHighlight] =
+    useState(widthHighlight);
 
   useEffect(() => {
     if (allOverClicked) {
@@ -27,10 +29,12 @@ const AbdomenSelection = ({
     }
   }, [allOverClicked]);
 
+  // Call the updateDynamicWidthHighlight function when the component mounts and whenever the window is resized
+
   const containerStyle: React.CSSProperties = {
     top: topPosHighlight,
     left: leftPosHighlight,
-    width: `${widthHighlight}px`,
+    width: `${widthHighlight}%`,
     cursor: "pointer",
     opacity: clicked ? 1 : hovered ? 0.5 : 0,
     transition: "opacity 0.3s ease-in-out",
@@ -44,11 +48,11 @@ const AbdomenSelection = ({
           style={{
             top: topPosCaption,
             left: leftPosCaption,
-            width: widthCaption !== undefined ? `${widthCaption}px` : "auto",
+            width: `${widthCaption}%`,
             position: "absolute",
           }}
         >
-          <Image src={imageCaption} alt="" />
+          <Image src={imageCaption} priority alt="image caption" />
         </div>
       ) : null}
 
@@ -62,12 +66,7 @@ const AbdomenSelection = ({
         onMouseLeave={() => setHovered(false)}
         className="z-50"
       >
-        <Image
-          src={imageHighlight}
-          alt=""
-          width={widthHighlight !== undefined ? widthHighlight : 77}
-          priority
-        />
+        <Image src={imageHighlight} alt="image highlight" priority />
       </div>
     </>
   );

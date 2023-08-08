@@ -31,7 +31,7 @@ const FingerSelection = ({
   const containerStyle: React.CSSProperties = {
     top: topPosHighlight,
     left: leftPosHighlight,
-    width: widthHighlight, // Use the string value directly
+    width: `${widthHighlight}%`, // Use the string value directly
     cursor: "pointer",
     opacity:
       isDipClicked && part === "dip"
@@ -85,7 +85,12 @@ const FingerSelection = ({
         }}
         className="z-50"
       >
-        <Image src={imageHighlight} alt={part} width={widthHighlight}  priority/>
+        <Image
+          src={imageHighlight}
+          alt={part}
+          // width={widthHighlight}
+          priority
+        />
       </div>
     </>
   );
